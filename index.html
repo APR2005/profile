@@ -50,11 +50,10 @@
         <img src="./assets/img/1.jpg" alt="" class="img-fluid rounded-circle">
         <h1 class="text-light"><a href="index.html">ASHER P RAJAN</a></h1>
         <div class="social-links mt-3 text-center">
-          <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-          <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-          <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-          <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+          <a href="https://twitter.com/ASHERPRAJAN2" target="_blank" class="twitter"><i class="bx bxl-twitter"></i></a>
+          <!-- <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a> -->
+          <a href="https://www.instagram.com/_stringz___/" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/asher-p-rajan-a99baa24b/" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
         </div>
       </div>
 
@@ -117,7 +116,7 @@
                 </ul>
               </div>
             </div>
-            
+              
           </div>
         </div>
 
@@ -222,7 +221,9 @@
             
             </div>
             <div class="resume-item">
-              <h4>12th grade education-81% </h4>
+              <h4>12th grade education-81%
+   </h4>
+
             
             
             </div>
@@ -237,7 +238,7 @@
                 <li>Lead in the design, development, and implementation of the graphic, layout, and production communication materials</li>
                 <li>Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the project. </li>
                 <li>Supervise the assessment of all graphic materials in order to ensure quality and accuracy of the design</li>
-                <li>Oversee the efficient use of production project budgets ranging from $2,000 - $25,000</li>
+                <li>Oversee the efficient use of production project budgets ranging from 2,000 - 25,000</li>
               </ul>
             </div>
            
@@ -248,7 +249,7 @@
     </section><!-- End Resume Section -->
 
     <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio section-bg">
+    <section id="portfolio" class="portfolio section-bg container-fluid">
       <div class="container">
 
         <div class="section-title">
@@ -267,22 +268,22 @@
 
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app container-fluid">
             <div class="portfolio-wrap">
               <img src="./assets/img/4.jpg" class="img-fluid" alt="">
               <div class="portfolio-links">
                 <a href="./assets/img/4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Website 1"><i class="bx bx-plus"></i></a>
-                <a href="https://apr2005.github.io/SALOON/" title="More Details"><i class="bx bx-link"></i></a>
+                <a href="https://apr2005.github.io/SALOON/" target="_blank" title="More Details"><i class="bx bx-link"></i></a>
               </div>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
             <div class="portfolio-wrap">
-              <img src="./assets/img/5.png" class="img-fluid" alt="">
+              <img src="./assets/img/5.png" class="img-fluid col-md-12" alt="">
               <div class="portfolio-links">
                 <a href="./assets/img/5.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="website 2"><i class="bx bx-plus"></i></a>
-                <a href="https://apr2005.github.io/SPOTIFY/" title="More Details"><i class="bx bx-link"></i></a>
+                <a href="https://apr2005.github.io/SPOTIFY/" target="_blank" title="More Details"><i class="bx bx-link"></i></a>
               </div>
             </div>
           </div>
@@ -292,7 +293,7 @@
               <img src="./assets/img/6.webp" class="img-fluid" alt="">
               <div class="portfolio-links">
                 <a href="./assets/img/6.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" title="website 3 "><i class="bx bx-plus"></i></a>
-                <a href="https://apr2005.github.io/buildcon/" title="More Details"><i class="bx bx-link"></i></a>
+                <a href="https://apr2005.github.io/buildcon/" target="_blank" title="More Details"><i class="bx bx-link"></i></a>
               </div>
             </div>
           </div>
@@ -408,29 +409,36 @@
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
             <form  id='submit-form' action="https://script.google.com/macros/s/AKfycbxeD0TYjqsPo2wBgwBb49WqheW_PUzGs6huKuddHr50dfmZGYVDTi9VCX4CE2XkmRW5/exec"  role="form" class="php-email-form">
               <div class="row">
+                <small class="d-flex justify-content-center text-danger " id="submiterror"></small>
                 <div class="form-group col-md-6">
+                  
                   <label for="name">Your Name</label>
-                  <input type="text" name="name" class="form-control" id="name" required>
+                  <input type="text" name="name" onkeyup="validateName()" class="form-control" id="name" >
+                  <smal id="nameerror" class="text-danger"></small>
                 </div>
                 <div class="form-group col-md-6">
                   <label for="name">Your Email</label>
-                  <input type="email" class="form-control" name="email" id="email" required>
+                  <input type="text" class="form-control" onkeyup="validateEmail()"  name="email" id="email" >
+                  <small id="emailerror" class="text-danger"></small>
                 </div>
               </div>
               <div class="form-group ">
                 <label for="name">Subject</label>
-                <input type="text" class="form-control" name="subject" id="subject" required>
+                <input type="text" class="form-control" onkeyup="validateSubject()" name="subject" id="subject" >
+                <small id="subjecterror" class="text-danger"></small>
               </div>
               <div class="form-group">
                 <label for="name">Message</label>
-                <textarea class="form-control" name="message" rows="10" required></textarea>
+                <textarea class="form-control" name="message" onkeyup="validateMessage()" rows="10" ></textarea>
+                <small id="messageerror" class="text-danger"></small>
               </div>
               <div class="my-3">
                 <div class="loading">Loading</div>
                 <!-- <div class="error-message"></div> -->
                 <div class="sent-message">Your message has been sent. Thank you!</div>
               </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+              <div class="text-center"><button onclick="return validateSubmit()" type="submit">Send Message</button> </div>
+             
             </form>
           </div>
 
@@ -438,6 +446,11 @@
 
       </div>
     </section><!-- End Contact Section -->
+    <!-- script js -->
+    <script>
+      
+    </script>
+    <!-- script js -->
 
   </main><!-- End #main -->
 

@@ -259,3 +259,89 @@
   new PureCounter();
 
 })()
+// form validation
+ 
+
+var nameerror = document.getElementById('nameerror')
+var emailerror = document.getElementById('emailerror')
+var subjecterror = document.getElementById('subjecterror')
+var messageerror = document.getElementById('messageerror')
+var submiterror = document.getElementById('submiterror')
+
+function validateName(){
+  var name = document.getElementById('name').value
+
+  if(name.length == 0){
+     nameerror.innerHTML ='Name is not valid'
+     return false
+  }
+  if (!name.match(/^[A-Za-z]*\s{1}[A-Za-z]*$/) ) {
+
+    nameerror.innerHTML = 'Please Write full name'
+    return false
+    
+  }
+  nameerror.innerHTML =""
+  return true;
+}
+function validateEmail(){
+  var email = document.getElementById('email').value;
+
+  if (email.length == 0) {
+
+      emailerror.innerHTML='Please Enter a email'
+
+      return false;
+      
+  }
+
+  if (email.match(/^[A-Za-z\._\-[0-9][@][A-Za-z][\.][a-z]{2,4}$/)) {
+
+      emailerror.innerHTML='Please Enter a Valid Email'
+
+      return false
+      
+  }
+  emailerror.innerHTML = ''
+
+  return true;
+
+}
+
+function validateSubject(){
+  var subject= document.getElementById('subject').value;
+   if (subject.length==0) {
+      subjecterror.innerHTML ='Enter a subject'     
+      
+      return false;
+   }
+
+   return true;
+
+}
+
+function validateMessage(){
+  var message= document.getElementById('message').value;
+   if (message.length ==0) {
+      messageerror.innerHTML ='Enter a message'     
+      return false;   
+   }
+
+   return true;
+
+}
+
+function validateSubmit(){
+  if (!validateEmail()|| !validateMessage()||!validateName()||!validateSubject()) {
+
+      submiterror.innerHTML='Please fill the form'
+
+      emailerror.innerHTML=''
+
+      return false;
+      
+  }
+
+  return true
+
+}
